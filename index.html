@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shifoumi</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer> </script>
 </head>
 <body>
     <header>
-
+        <h1>Shifoumi</h1>
     </header>
 
     <main>
-
+        <button class="bouton" type="button" id="pierre">Pierre</button>
+        <button class="bouton" type="button" id="feuille">Feuille</button>
+        <button class="bouton" type="button" id="ciseau">Ciseau</button>
+        
     </main>
+    <section>
+        <div id="coup">
+            <div class="coup12">
+                <p>Coup Joueur</p>
+            <span id="coupJoueur">  </span>
+            </div>
+            <div class="coup12">
+                <p>Coup IA</p>
+                <span id="coupIA">  </span>
+            </div>
+            
+        </div>
+        <p><span id="result">Résultat</span></p>
+        <p>Nombre Victoire: <span id="Victoire">  </span></p>
+        <p>Nombre Défaite: <span id="Defaite">  </span></p>
+        <p>Nombre Egalité: <span id="Egalite">  </span></p>
+    </section>
     
 </body>
 </html>
