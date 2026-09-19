@@ -1,34 +1,44 @@
-body{
-    display:flex;
-    flex-direction:column;
+body {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+    font-family: 'Roboto', sans-serif; 
 }
-#coup{
+h1{
+    margin:0;
+    padding:0;
+}
+#coupsbox{
     display:flex;
     flex-direction:row;
     justify-content: center;
-    gap:35px;
+    width: 100%;
     
 }
 main{
     background-color: hsl(160, 86%, 71%);
-    width:80%;
-    height: 500px;
+    width:65%;
+    height: 350px;
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items:center;
     gap: 40px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .bouton{
-    width: 150px;
-    height:75px;
+    min-width: 150px;
+    min-height:75px;
     border: none;
-    border-radius: 25px;
+    border-radius: 20px;
     font-size: larger;
+    border: 2px solid none;
 }
 
 section{
@@ -36,17 +46,34 @@ section{
     flex-direction:column;
     justify-content: center;
     align-items:center;
+    background-color: rgb(166, 209, 246);
+    padding:15px;
+    border-radius: 20px;
+    gap:15px;
+    width:15%;
+    
 }
-.coup12{
+.coups{
     display:flex;
     flex-direction: column;
     align-items:center;
+    gap:9px;
+    width:50%;
 
 }
-p {
-    margin-top: 5px;    /* Espace au-dessus */
-    margin-bottom: 5px; /* Espace en-dessous */
+
+li{
+    list-style: none;
+    margin:0;
+    padding: 0;
 }
+
+ul{
+    margin:0;
+    padding: 0;
+    text-align:center;
+}
+
 
 button:hover{
     background-color: rgb(94, 102, 100);
@@ -54,16 +81,20 @@ button:hover{
     border:  2px solid gold;
 }
 
+
 @media screen and (max-width: 768px) {
     
     main {
         padding:15px;
-        flex-direction: column; /* On passe à la verticale ! */
-        align-items: center;    /* On centre les boutons */
+        flex-direction: column;
+        align-items: center;    
         height:auto;
     }
+    section{
+        width:45%;
+    }
 
-    /* Tu peux aussi grossir le texte pour les doigts */
+    
     .bouton {
         font-size: 20px;
         padding: 15px;

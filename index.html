@@ -6,6 +6,10 @@
     <title>Shifoumi</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer> </script>
+    <script src="https://kit.fontawesome.com/c6674749ac.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,27 +17,29 @@
     </header>
 
     <main>
-        <button class="bouton" type="button" id="pierre">Pierre</button>
-        <button class="bouton" type="button" id="feuille">Feuille</button>
-        <button class="bouton" type="button" id="ciseau">Ciseau</button>
+        <button class="bouton" type="button" data-choix="pierre"><i class="fa-regular fa-hand-back-fist fa-2xl"></i></button>
+        <button class="bouton" type="button" data-choix="feuille"><i class="fa-regular fa-hand fa-2xl"></i></button>
+        <button class="bouton" type="button" data-choix="ciseau"><i class="fa-regular fa-hand-scissors fa-2xl"></i></button>
         
     </main>
     <section>
-        <div id="coup">
-            <div class="coup12">
-                <p>Coup Joueur</p>
-            <span id="coupJoueur">  </span>
+        <div id="coupsbox">
+            <div class="coups">
+                <span>Joueur</span>
+            <span id="coupjoueur"><i class="fa-solid fa-x"></i>  </span>
             </div>
-            <div class="coup12">
-                <p>Coup IA</p>
-                <span id="coupIA">  </span>
+            <div class="coups">
+                <span>IA</span>
+                <span id="coupia"><i class="fa-solid fa-x"></i>  </span>
             </div>
             
         </div>
-        <p><span id="result">Résultat</span></p>
-        <p>Nombre Victoire: <span id="Victoire">  </span></p>
-        <p>Nombre Défaite: <span id="Defaite">  </span></p>
-        <p>Nombre Egalité: <span id="Egalite">  </span></p>
+        <span id="result">Résultat</span>
+        <ul>
+            <li>Victoire: <span id="victoire">  </span></li>
+            <li>Défaite: <span id="defaite">  </span></li>
+            <li>Egalité: <span id="egalite">  </span></li>
+        </ul>
     </section>
     
 </body>

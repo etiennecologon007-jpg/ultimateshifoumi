@@ -1,13 +1,11 @@
-let boutonPierre=document.getElementById('pierre');
-let boutonFeuille=document.getElementById('feuille');
-let boutonCiseau=document.getElementById('ciseau');
+let bouton=document.querySelectorAll('.bouton')
 let texteAffiche=document.getElementById('texte');
-let coupJoueur=document.getElementById('coupJoueur');
-let coupDeIA=document.getElementById('coupIA');
+let coupJoueur=document.getElementById('coupjoueur');
+let coupDeIA=document.getElementById('coupia');
 let resultat=document.getElementById('result');
-let afficheVictoire=document.getElementById('Victoire');
-let afficheDefaite=document.getElementById('Defaite');
-let afficheEgalite=document.getElementById('Egalite');
+let afficheVictoire=document.getElementById('victoire');
+let afficheDefaite=document.getElementById('defaite');
+let afficheEgalite=document.getElementById('egalite');
 
 
 let tab=['pierre','feuille','ciseau'];
@@ -17,16 +15,13 @@ nbreEgalite=0;
 afficheVictoire.textContent=nbreVictoire;
 afficheDefaite.textContent=nbreDefaite;
 afficheEgalite.textContent=nbreEgalite;
-boutonPierre.addEventListener('click',()=>{
-    game("pierre");
-});
-boutonFeuille.addEventListener('click',()=>{
-    game("feuille");
+bouton.forEach(bouton => {
+    bouton.addEventListener('click',(event)=>{
+        let choix=event.currentTarget.dataset.choix;
+        game(choix);
+    });
 });
 
-boutonCiseau.addEventListener('click',()=>{
-    game("ciseau");
-});
 
 function ia(){
    return  tab[Math.floor(Math.random() *3)];
@@ -38,19 +33,19 @@ function win(){
     resultat.textContent="Victoire";
 }
 
-function game(coup){
-    coupIA=ia();
-    coupDeIA.textContent=coupIA;
-    coupJoueur.textContent=coup;
-    if(coup==coupIA){
+function game(choix){
+    choixIA=ia();
+    coupDeIA.textContent=choixIA;
+    coupJoueur.textContent=choix;
+    if(choix==choixIA){
         nbreEgalite++;
         afficheEgalite.textContent=nbreEgalite;
-        resultat.textContent="égalité";
-    }else if(coup=="ciseau" && coupIA=="feuille"){
+        resultat.textContent="Egalité";
+    }else if(choix=="ciseau" && choixIA=="feuille"){
         win();
-    }else if(coup=="pierre" && coupIA=="ciseau"){
+    }else if(choix=="pierre" && choixIA=="ciseau"){
         win();
-    }else if(coup=="feuille" && coupIA=="pierre"){
+    }else if(choix=="feuille" && choixIA=="pierre"){
         win();
     }else{
          resultat.textContent="Perdue";
