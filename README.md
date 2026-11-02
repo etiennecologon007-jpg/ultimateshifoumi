@@ -6,7 +6,7 @@ Le joueur choisit entre pierre, feuille et ciseau, puis l'ordinateur joue au has
 
 ## 🚀 Démo
 
-https://deniscologon-svg.github.io/ultimateshifoumi/
+https://etiennecologon007-jpg.github.io/ultimateshifoumi/
 
 ## ✨ Fonctionnalités
 
